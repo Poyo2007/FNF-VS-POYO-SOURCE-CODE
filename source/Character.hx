@@ -80,7 +80,7 @@ class Character extends FlxSprite
 	public var healthColorArray:Array<Int> = [255, 0, 0];
 
 	public static var DEFAULT_CHARACTER:String = 'bf'; //In case a character is missing, it will use BF on its place
-	public function new(x:Float, y:Float, player:Bool ?character:String = 'bf', ?isPlayer:Bool = false)
+	public function new(x:Float, y:Float, player:Bool, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
 		super(x, y);
 
