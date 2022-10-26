@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 16,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-62,
+				-6
+			],
+			"anim": "singLEFT",
+			"fps": 8,
+			"name": "Right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				63,
+				-8
+			],
+			"anim": "singRIGHT",
+			"fps": 8,
+			"name": "Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				21,
+				-82
+			],
+			"anim": "singDOWN",
+			"fps": 8,
+			"name": "Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-7,
+				-32
+			],
+			"anim": "singUP",
+			"fps": 8,
+			"name": "Up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/poyolmao",
+	"position": [
+		0,
+		120
+	],
+	"healthicon": "face",
+	"flip_x": true,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		-40,
+		250
+	],
+	"sing_duration": 6.1,
+	"scale": 1.1
+}

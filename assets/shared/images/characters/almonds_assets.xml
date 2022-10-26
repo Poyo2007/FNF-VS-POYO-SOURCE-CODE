@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="almonds_assets.png"><SubTexture name="almon idle0000" x="1462" y="633" width="377" height="631" frameX="-528" frameY="-60" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon idle0001" x="1462" y="633" width="377" height="631" frameX="-528" frameY="-60" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon idle0002" x="1056" y="664" width="373" height="644" frameX="-524" frameY="-48" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon idle0003" x="1056" y="664" width="373" height="644" frameX="-524" frameY="-48" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon idle0004" x="692" y="664" width="364" height="651" frameX="-522" frameY="-40" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon idle0005" x="692" y="664" width="364" height="651" frameX="-522" frameY="-40" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon right0000" x="0" y="664" width="332" height="652" frameX="-536" frameY="-39" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon right0001" x="0" y="664" width="332" height="652" frameX="-536" frameY="-39" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon right0002" x="1132" y="0" width="330" height="654" frameX="-534" frameY="-37" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon right0003" x="1132" y="0" width="330" height="654" frameX="-534" frameY="-37" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon up0000" x="0" y="0" width="392" height="664" frameX="-505" frameY="-27" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon up0001" x="0" y="0" width="392" height="664" frameX="-505" frameY="-27" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon up0002" x="392" y="0" width="386" height="663" frameX="-500" frameY="-29" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon up0003" x="392" y="0" width="386" height="663" frameX="-500" frameY="-29" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon left0000" x="332" y="664" width="360" height="652" frameX="-537" frameY="-40" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon left0001" x="332" y="664" width="360" height="652" frameX="-537" frameY="-40" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon left0002" x="778" y="0" width="354" height="657" frameX="-529" frameY="-35" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon left0003" x="778" y="0" width="354" height="657" frameX="-529" frameY="-35" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon down0000" x="1888" y="0" width="455" height="626" frameX="-523" frameY="-66" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon down0001" x="1888" y="0" width="455" height="626" frameX="-523" frameY="-66" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon down0002" x="1462" y="0" width="426" height="633" frameX="-533" frameY="-59" frameWidth="1280" frameHeight="720" />
+<SubTexture name="almon down0003" x="1462" y="0" width="426" height="633" frameX="-533" frameY="-59" frameWidth="1280" frameHeight="720" />
+</TextureAtlas>

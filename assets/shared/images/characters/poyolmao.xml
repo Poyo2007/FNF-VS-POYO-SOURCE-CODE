@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="">
+	<!-- Created with Free Tex Packer
+	Generator by Poyo!!-->
+	<SubTexture name="Idle0005" x="0" y="0" width="237" height="567" frameX="0" frameY="0" frameWidth="237" frameHeight="0"/>
+	<SubTexture name="Idle0004" x="0" y="567" width="241" height="565" frameX="0" frameY="-2" frameWidth="241" frameHeight="567"/>
+	<SubTexture name="Idle0003" x="0" y="1132" width="252" height="562" frameX="0" frameY="-4" frameWidth="252" frameHeight="1132"/>
+	<SubTexture name="Idle0002" x="252" y="1122" width="255" height="558" frameX="0" frameY="-9" frameWidth="255" frameHeight="1122"/>
+	<SubTexture name="Idle0001" x="507" y="1122" width="261" height="554" frameX="0" frameY="-13" frameWidth="261" frameHeight="1122"/>
+	<SubTexture name="Idle0000" x="947" y="0" width="265" height="550" frameX="0" frameY="-17" frameWidth="265" frameHeight="0"/>
+	<SubTexture name="Left0001" x="237" y="0" width="347" height="562" frameX="0" frameY="0" frameWidth="347" frameHeight="0"/>
+	<SubTexture name="Left0000" x="601" y="559" width="366" height="553" frameX="-19" frameY="-9" frameWidth="366" frameHeight="559"/>
+	<SubTexture name="Up0001" x="967" y="550" width="321" height="536" frameX="0" frameY="0" frameWidth="321" frameHeight="550"/>
+	<SubTexture name="Up0000" x="768" y="1112" width="326" height="538" frameX="-5" frameY="2" frameWidth="326" frameHeight="1112"/>
+  <SubTexture name="Down0001" x="1212" y="0" width="241" height="497" frameX="0" frameY="0" frameWidth="241" frameHeight="0"/>
+  <SubTexture name="Down0000" x="1453" y="0" width="255" height="485" frameX="-14" frameY="-12" frameWidth="255" frameHeight="0"/>
+  <SubTexture name="Right0001" x="241" y="562" width="360" height="560" frameX="0" frameY="0" frameWidth="360" frameHeight="562"/>
+	<SubTexture name="Right0000" x="584" y="0" width="363" height="559" frameX="-3" frameY="-1" frameWidth="363" frameHeight="0"/>
+</TextureAtlas>
+

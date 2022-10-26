@@ -1,0 +1,583 @@
+{
+	"song": {
+		"speed": 2.5,
+		"stage": "cityvspoyo",
+		"player1": "new bf",
+		"player2": "poyo",
+		"events": [
+			[
+				10000,
+				[
+					[
+						"Camera Flash",
+						"",
+						""
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				18000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					],
+					[
+						"Camera Flash",
+						"",
+						""
+					]
+				]
+			],
+			[
+				18500,
+				[
+					[
+						"Note Spin",
+						"",
+						""
+					]
+				]
+			],
+			[
+				22500,
+				[
+					[
+						"Note Spin",
+						"",
+						""
+					]
+				]
+			],
+			[
+				26500,
+				[
+					[
+						"Note Spin",
+						"",
+						""
+					]
+				]
+			],
+			[
+				27625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				27750,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				30500,
+				[
+					[
+						"Note Spin",
+						"",
+						""
+					]
+				]
+			],
+			[
+				31625,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				31750,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				34500,
+				[
+					[
+						"Note Spin",
+						"",
+						""
+					]
+				]
+			],
+			[
+				36500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				37000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				37500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				38000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				38500,
+				[
+					[
+						"Note Spin",
+						"",
+						""
+					]
+				]
+			],
+			[
+				40500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				41000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				41500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				42000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					],
+					[
+						"Camera Follow Pos",
+						"640",
+						"360"
+					]
+				]
+			],
+			[
+				42500,
+				[
+					[
+						"Note Spin",
+						"",
+						""
+					]
+				]
+			],
+			[
+				44500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				45000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				45500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				46000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				46500,
+				[
+					[
+						"Note Spin",
+						"",
+						""
+					]
+				]
+			],
+			[
+				48500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1"
+					]
+				]
+			],
+			[
+				49000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				49500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				50000,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				51250,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				51500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				55250,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				55500,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				58000,
+				[
+					[
+						"Add Camera Zoom",
+						"0.1",
+						""
+					],
+					[
+						"Camera Flash",
+						"",
+						""
+					]
+				]
+			],
+			[
+				74000,
+				[
+					[
+						"Camera Follow Pos",
+						"640",
+						"369"
+					]
+				]
+			],
+			[
+				82000,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				93000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.8"
+					]
+				]
+			],
+			[
+				94000,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				97000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.8"
+					]
+				]
+			],
+			[
+				97687.5,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				98000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.6"
+					]
+				]
+			],
+			[
+				114000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					],
+					[
+						"Camera Follow Pos",
+						"640",
+						"360"
+					]
+				]
+			],
+			[
+				130000,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					]
+				]
+			],
+			[
+				132000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.6"
+					]
+				]
+			],
+			[
+				147437.5,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.4"
+					]
+				]
+			],
+			[
+				147562.5,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.6"
+					]
+				]
+			],
+			[
+				148000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.65"
+					]
+				]
+			],
+			[
+				156000,
+				[
+					[
+						"Camera Follow Pos",
+						"640",
+						"360"
+					]
+				]
+			],
+			[
+				164000,
+				[
+					[
+						"Camera Follow Pos",
+						"",
+						""
+					],
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"0.8"
+					]
+				]
+			],
+			[
+				172000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			],
+			[
+				180000,
+				[
+					[
+						"Set Property",
+						"defaultCamZoom",
+						"1.2"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "new gf",
+		"bpm": 240,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "Epic"
+	}
+}

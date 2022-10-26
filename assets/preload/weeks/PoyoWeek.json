@@ -1,0 +1,50 @@
+{
+  "songs": [
+    [
+      "Summer-Sunset",
+      "poyo",
+      [
+        255,
+        181,
+        181
+      ]
+    ],
+    [
+      "Energizer",
+      "poyo",
+      [
+        255,
+        181,
+        181
+      ]
+    ],
+    [
+      "epic",
+      "poyo",
+      [
+        255,
+        181,
+        181
+      ]
+    ]
+  ],
+  "hiddenUntilUnlocked": false,
+  "hideFreeplay": false,
+  "weekBackground": "poyo",
+  "difficulties": "Normal",
+  "weekCharacters": [
+    "",
+    "",
+    ""
+  ],
+  "storyName": "Poyo\u0027s Week",
+  "weekName": "Poyo\u0027s Week",
+  "freeplayColor": [
+    255,
+    181,
+    181
+  ],
+  "hideStoryMode": false,
+  "weekBefore": "week6",
+  "startUnlocked": true
+}

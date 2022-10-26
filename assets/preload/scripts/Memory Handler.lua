@@ -1,0 +1,3 @@
+function onSongStart()
+    clearUnusedMemory()
+end

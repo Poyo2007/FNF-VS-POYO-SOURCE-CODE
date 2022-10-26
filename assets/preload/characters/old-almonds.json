@@ -1,0 +1,78 @@
+{
+  "animations": [
+    {
+      "loop": false,
+      "offsets": [
+        0,
+        0
+      ],
+      "anim": "idle",
+      "fps": 24,
+      "name": "almon idle",
+      "indices": []
+    },
+    {
+      "loop": false,
+      "offsets": [
+        50,
+        7
+      ],
+      "anim": "singDOWN",
+      "fps": 24,
+      "name": "almon down",
+      "indices": []
+    },
+    {
+      "loop": false,
+      "offsets": [
+        18,
+        1
+      ],
+      "anim": "singLEFT",
+      "fps": 24,
+      "name": "almon left",
+      "indices": []
+    },
+    {
+      "loop": false,
+      "offsets": [
+        12,
+        0
+      ],
+      "anim": "singRIGHT",
+      "fps": 24,
+      "name": "almon right",
+      "indices": []
+    },
+    {
+      "loop": false,
+      "offsets": [
+        15,
+        4
+      ],
+      "anim": "singUP",
+      "fps": 24,
+      "name": "almon up",
+      "indices": []
+    }
+  ],
+  "no_antialiasing": false,
+  "image": "characters/almonds_assets",
+  "position": [
+    -520,
+    30
+  ],
+  "healthicon": "old-almonds",
+  "flip_x": true,
+  "healthbar_colors": [
+    255,
+    96,
+    96
+  ],
+  "camera_position": [
+    20,
+    -10
+  ],
+  "sing_duration": 6.1,
+  "scale": 1
+}
