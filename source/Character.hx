@@ -206,10 +206,10 @@ class Character extends FlxSprite
 							animation.addByPrefix(animAnim, animName, animFps, animLoop);
 						}
 
-						if(anim.offsets != null && !player && anim.offsets.length > 1 && ) {
+						if(anim.offsets != null && !player && anim.offsets.length > 1) {
 							addOffset(anim.anim, anim.offsets[0], anim.offsets[1]);
 						}
-						else if(anim.offsets == null && anim.player_offsets != null && !player && anim.offsets.length > 1 && ) {
+						else if(anim.offsets == null && anim.player_offsets != null && !player && anim.offsets.length > 1) {
 							addOffset(anim.anim, anim.player_offsets[0], anim.player_offsets[1]);
 						}
 						
