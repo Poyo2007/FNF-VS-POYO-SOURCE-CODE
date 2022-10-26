@@ -218,11 +218,10 @@ class Character extends FlxSprite
 						}
 						else if (anim.player_offsets == null && anim.offsets != null && player && anim.offsets.length > 1) {
 							addOffset(anim.anim, anim.offsets[0], anim.offsets[1]);
+						} else {
+							quickAnimAdd('idle', 'BF idle dance');
 						}
-				} else {
-					quickAnimAdd('idle', 'BF idle dance');
-				}
-				//trace('Loaded file to character ' + curCharacter);
+						//trace('Loaded file to character ' + curCharacter);
 		}
 		originalFlipX = flipX;
 
