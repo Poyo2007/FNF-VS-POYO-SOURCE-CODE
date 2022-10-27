@@ -42,7 +42,6 @@ typedef AnimArray = {
 	var loop:Bool;
 	var indices:Array<Int>;
 	var offsets:Array<Int>;
-	var player_offsets:Array<Int>;
 }
 
 class Character extends FlxSprite
@@ -80,7 +79,7 @@ class Character extends FlxSprite
 	public var healthColorArray:Array<Int> = [255, 0, 0];
 
 	public static var DEFAULT_CHARACTER:String = 'bf'; //In case a character is missing, it will use BF on its place
-	public function new(x:Float, y:Float, player:Bool, ?character:String = 'bf', ?isPlayer:Bool = false)
+	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
 		super(x, y);
 
@@ -208,19 +207,18 @@ class Character extends FlxSprite
 
 						if(anim.offsets != null && !player && anim.offsets.length > 1) {
 							addOffset(anim.anim, anim.offsets[0], anim.offsets[1]);
-						}
-						else if(anim.offsets == null && anim.player_offsets != null && !player && anim.offsets.length > 1) {
+						} else if(anim.offsets == null && anim.player_offsets != null && !player && anim.offsets.length > 1) {
 							addOffset(anim.anim, anim.player_offsets[0], anim.player_offsets[1]);
-						}
-						else if(anim.player_offsets != null && player && anim.offsets.length > 1) {
+						} else if(anim.player_offsets != null && player && anim.offsets.length > 1) {
 							addOffset(anim.anim, anim.player_offsets[0], anim.player_offsets[1]);
-						}
-						else if (anim.player_offsets == null && anim.offsets != null && player && anim.offsets.length > 1) {
+						} else if (anim.player_offsets == null && anim.offsets != null && player && anim.offsets.length > 1) {
 							addOffset(anim.anim, anim.offsets[0], anim.offsets[1]);
-						} else {
-							quickAnimAdd('idle', 'BF idle dance');
 						}
-						//trace('Loaded file to character ' + curCharacter);
+					}
+				} else {
+					quickAnimAdd('idle', 'BF idle dance');
+				}
+				//trace('Loaded file to character ' + curCharacter);
 		}
 		originalFlipX = flipX;
 
