@@ -673,9 +673,11 @@ class CharacterEditorState extends MusicBeatState
 			}
 
 			var lastOffsets:Array<Int> = [0, 0];
+			var lastPlayerOffsets:Array<Int> = [0, 0]
 			for (anim in char.animationsArray) {
 				if(animationInputText.text == anim.anim) {
 					lastOffsets = anim.offsets;
+					lastPlayerOffsets = anim.player_offsets;
 					if(char.animation.getByName(animationInputText.text) != null) {
 						char.animation.remove(animationInputText.text);
 					}
@@ -690,6 +692,7 @@ class CharacterEditorState extends MusicBeatState
 				loop: animationLoopCheckBox.checked,
 				indices: indices,
 				offsets: lastOffsets
+				player_offsets: lastPlayerOffsets
 			};
 			if(indices != null && indices.length > 0) {
 				char.animation.addByIndices(newAnim.anim, newAnim.name, newAnim.indices, "", newAnim.fps, newAnim.loop);
