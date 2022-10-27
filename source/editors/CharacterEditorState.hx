@@ -691,7 +691,7 @@ class CharacterEditorState extends MusicBeatState
 				fps: Math.round(animationNameFramerate.value),
 				loop: animationLoopCheckBox.checked,
 				indices: indices,
-				offsets: lastOffsets
+				offsets: lastOffsets,
 				player_offsets: lastPlayerOffsets
 			};
 			if(indices != null && indices.length > 0) {
