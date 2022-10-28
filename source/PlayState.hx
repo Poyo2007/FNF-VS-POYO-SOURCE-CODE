@@ -2644,9 +2644,8 @@ class PlayState extends MusicBeatState
 		{
 			var ret:Dynamic = callOnLuas('onGameOver', []);
 			if(ret != FunkinLua.Function_Stop) {
-				if (boyfriend != null) {
+				if (boyfriend != null)
 					boyfriend.stunned = true;
-				}
 				deathCounter++;
 
 				paused = true;
@@ -2666,9 +2665,9 @@ class PlayState extends MusicBeatState
 					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x - boyfriend.positionArray[0], boyfriend.getScreenPosition().y - boyfriend.positionArray[1], camFollowPos.x, camFollowPos.y));
 				else {
 					if(isStoryMode) {
-						MusicBeatState.switchState(new MainMenuState);
+						MusicBeatState.switchState(new MainMenuState());
 					} else {
-						MusicBeatState.switchState(new FreeplayState);
+						MusicBeatState.switchState(new FreeplayState());
 					}
 				}
 				// MusicBeatState.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
