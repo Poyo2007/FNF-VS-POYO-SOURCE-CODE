@@ -47,7 +47,7 @@ class CharSelectState extends MusicBeatState{
 		    add(grpChars);
         for (i in 0...CharJSON.characters.length)
         {
-          var char:Character = new Character(0, 0, CharJSON.characters[i][0], true);
+          var char:Character = new Character(0, 0, true, CharJSON.characters[i][0], true);
       		char.updateHitbox();
       		char.screenCenter();
       		char.x += CharJSON.characters[i][1];
