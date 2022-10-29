@@ -3436,7 +3436,6 @@ class PlayState extends MusicBeatState
 		rating.acceleration.y = 550;
 		rating.velocity.y -= FlxG.random.int(140, 175);
 		rating.velocity.x -= FlxG.random.int(0, 10);
-		rating.visible = (!ClientPrefs.hideHud && showRating);
 		rating.x += ClientPrefs.comboOffset[0];
 		rating.y -= ClientPrefs.comboOffset[1];
 
@@ -3558,11 +3557,10 @@ class PlayState extends MusicBeatState
 		p2Rate.loadGraphic(Paths.image(pixelShitPart1 + 'sick' + pixelShitPart2));
 		p2Rate.cameras = [camHUD];
 		p2Rate.x = 150;
-		p2Rate.screenCenter(Y)
+		p2Rate.screenCenter(Y);
 		p2Rate.acceleration.y = 550;
 		p2Rate.velocity.y -= FlxG.random.int(140, 175);
 		p2Rate.velocity.x -= FlxG.random.int(0, 10);
-		p2Rate.visible = (!ClientPrefs.hideHud && showRating);
 		p2Rate.x += ClientPrefs.comboOffset[0];
 		p2Rate.y -= ClientPrefs.comboOffset[1];
 		
