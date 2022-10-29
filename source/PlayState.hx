@@ -3543,6 +3543,32 @@ class PlayState extends MusicBeatState
 			startDelay: Conductor.crochet * 0.001
 		});
 	}
+	
+	private function opponentPopUp():Void {
+	  var pixelShitPart1:String = "";
+		var pixelShitPart2:String = '';
+
+		if (PlayState.isPixelStage)
+		{
+			pixelShitPart1 = 'pixelUI/';
+			pixelShitPart2 = '-pixel';
+		}
+		var p2Rate:FlxSprite = new FlxSprite();
+
+		p2Rate.loadGraphic(Paths.image(pixelShitPart1 + 'sick' + pixelShitPart2));
+		p2Rate.cameras = [camHUD];
+		p2Rate.x = 150;
+		p2Rate.screenCenter(Y)
+		p2Rate.acceleration.y = 550;
+		p2Rate.velocity.y -= FlxG.random.int(140, 175);
+		p2Rate.velocity.x -= FlxG.random.int(0, 10);
+		p2Rate.visible = (!ClientPrefs.hideHud && showRating);
+		p2Rate.x += ClientPrefs.comboOffset[0];
+		p2Rate.y -= ClientPrefs.comboOffset[1];
+		
+		add(p2Rate);
+		p2Rate.updateHitbox();
+	}
 
 	private function onKeyPress(event:KeyboardEvent):Void
 	{

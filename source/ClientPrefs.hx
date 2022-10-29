@@ -10,6 +10,7 @@ class ClientPrefs {
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
 	public static var opponentStrums:Bool = true;
+	public static var poyoMode:Bool = false;
 	public static var showFPS:Bool = #if android false #else true #end;
 	public static var flashing:Bool = true;
 	public static var globalAntialiasing:Bool = true;
@@ -96,6 +97,7 @@ class ClientPrefs {
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
 		FlxG.save.data.opponentStrums = opponentStrums;
+		FlxG.save.data.poyoMode = poyoMode
 		FlxG.save.data.showFPS = showFPS;
 		FlxG.save.data.flashing = flashing;
 		FlxG.save.data.globalAntialiasing = globalAntialiasing;
@@ -148,6 +150,9 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.opponentStrums != null) {
 			opponentStrums = FlxG.save.data.opponentStrums;
+		}
+		if(FlxG.save.data.poyoMode != null) {
+			poyoMode = FlxG.save.data.poyoMode;
 		}
 		if(FlxG.save.data.charSelect != null) {
 			charSelect = FlxG.save.data.charSelect;

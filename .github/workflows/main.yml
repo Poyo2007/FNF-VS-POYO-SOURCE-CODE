@@ -155,7 +155,7 @@ jobs:
         uses: nttld/setup-ndk@v1
         id: setup-ndk
         with:
-          ndk-version: r21e
+          ndk-version: r25b
 
       - name: Setup Java JDK
         uses: actions/setup-java@v1
@@ -173,8 +173,13 @@ jobs:
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
-          haxelib install hxcpp > /dev/null
+          git clone https://github.com/Sirox228/hxcpp-new-ndk-support
+          haxelib dev hxcpp hxcpp-new-ndk-support
+          cd hxcpp-new-ndk-support/tools/hxcpp
+          haxe compile.hxml
+          cd ../../../
           haxelib install lime 7.9.0
+          haxelib --quiet install lime-samples
           haxelib install openfl 9.1.0
           haxelib --never install flixel
           haxelib run lime setup flixel
