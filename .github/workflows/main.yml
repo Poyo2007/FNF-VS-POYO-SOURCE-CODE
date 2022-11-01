@@ -180,6 +180,7 @@ jobs:
           haxelib --quiet install away3d
           haxelib --quiet git extension-androidtools https://github.com/Poyo2007/extension-androidtools.git
           haxelib --quiet git linc_luajit https://github.com/Sirox228/linc_luajit.git
+          haxelib --quiet git extension-videoview https://github.com/MAJigsaw77/extension-videoview.git
 
       - name: Setup Lime
         run: |
