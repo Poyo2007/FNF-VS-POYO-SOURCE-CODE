@@ -178,7 +178,7 @@ jobs:
           haxelib --quiet install flixel-addons
           haxelib --quiet install hscript
           haxelib --quiet install away3d
-          haxelib --quiet git extension-androidtools https://github.com/Poyo2007@/extension-androidtools.git
+          haxelib --quiet git extension-androidtools https://github.com/Poyo2007/extension-androidtools.git
 
       - name: Setup Lime
         run: |
