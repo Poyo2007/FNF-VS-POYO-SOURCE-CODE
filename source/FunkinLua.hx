@@ -19,7 +19,7 @@ import flixel.util.FlxTimer;
 import flixel.FlxSprite;
 import flixel.FlxCamera;
 import flixel.util.FlxColor;
-import flixel.asic;
+import flixel.FlxBasic;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import openfl.Lib;
@@ -767,7 +767,7 @@ class FunkinLua {
 		//shitass stuff for epic coders like me B)  *image of obama giving himself a medal*
 		Lua_helper.add_callback(lua, "getObjectOrder", function(obj:String) {
 			var killMe:Array<String> = obj.split('.');
-			var leObj:asic = getObjectDirectly(killMe[0]);
+			var leObj:FlxBasic = getObjectDirectly(killMe[0]);
 			if(killMe.length > 1) {
 				leObj = getVarInArray(getPropertyLoopThingWhatever(killMe), killMe[killMe.length-1]);
 			}
@@ -781,7 +781,7 @@ class FunkinLua {
 		});
 		Lua_helper.add_callback(lua, "setObjectOrder", function(obj:String, position:Int) {
 			var killMe:Array<String> = obj.split('.');
-			var leObj:asic = getObjectDirectly(killMe[0]);
+			var leObj:FlxBasic = getObjectDirectly(killMe[0]);
 			if(killMe.length > 1) {
 				leObj = getVarInArray(getPropertyLoopThingWhatever(killMe), killMe[killMe.length-1]);
 			}
