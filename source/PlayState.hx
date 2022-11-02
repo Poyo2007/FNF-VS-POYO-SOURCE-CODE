@@ -190,6 +190,8 @@ class PlayState extends MusicBeatState
 
 	public var botplaySine:Float = 0;
 	public var botplayTxt:FlxText;
+	
+	public var songInfo:FlxText;
 
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
@@ -243,13 +245,12 @@ class PlayState extends MusicBeatState
 	var bgGhouls:BGSprite;
 
 	public var songScore:Int = 0;
+	public var p2_SongScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
-	public var scoreTxt:FlxText;
 	public var judgementTxt:FlxText;
 	public var wipTxt:FlxText;
 	var timeTxt:FlxText;
-	var scoreTxtTween:FlxTween;
 	
 	public var songCreator:String = "Unknown";
 	public var chartCreator:String = "Unknown";
@@ -822,28 +823,12 @@ class PlayState extends MusicBeatState
 			reloadHealthBarColors();
 		}
 
-		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		scoreTxt.scrollFactor.set();
-		scoreTxt.borderSize = 1.25;
-		scoreTxt.visible = !ClientPrefs.hideHud;
-		add(scoreTxt);
-		
 		judgementTxt = new FlxText(0, 0, FlxG.width, "", 20);
 		judgementTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		judgementTxt.scrollFactor.set();
 		judgementTxt.borderSize = 1.25;
-		judgementTxt.visible = !ClientPrefs.hideHud;
 		judgementTxt.screenCenter(Y);
 		add(judgementTxt);
-		
-		wipTxt = new FlxText(0, 0, FlxG.width, "WIP BUILD\nTHINGS ARE SUBJECT TO CHANGE", 20);
-		wipTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		wipTxt.scrollFactor.set();
-		wipTxt.borderSize = 1.25;
-		wipTxt.alpha = 0.2;
-		wipTxt.screenCenter();
-		add(wipTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -864,9 +849,7 @@ class PlayState extends MusicBeatState
 			iconP1.cameras = [camHUD];
 			iconP2.cameras = [camHUD];
 		}
-		scoreTxt.cameras = [camHUD];
 		judgementTxt.cameras = [camHUD];
-		wipTxt.cameras = [camOther];
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
 		timeBarBG.cameras = [camHUD];
@@ -2213,19 +2196,14 @@ class PlayState extends MusicBeatState
 		setOnLuas('curDecStep', curDecStep);
 		setOnLuas('curDecBeat', curDecBeat);
 
-		scoreTxt.text = 'Composer: ' + songCreator + ' | Charter: ' + chartCreator + '\n' + 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
-		if(ratingName != '?')
-			scoreTxt.text += ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;
+		//scoreTxt.text = 'Composer: ' + songCreator + ' | Charter: ' + chartCreator + '\n' + 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingName;
+		//if(ratingName != '?')
+			//scoreTxt.text += ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;
 
 		if(botplayTxt.visible) {
 			botplaySine += 180 * elapsed;
 			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
 		}
-		
-		judgementTxt.text = 'Sicks: ' + sicks
-		+ '\nGoods: ' + goods
-		+ '\nBads: ' + bads
-		+ '\nShits: ' + shits;
 
 		if (controls.PAUSE #if android || FlxG.android.justReleased.BACK #end && startedCountdown && canPause)
 		{
@@ -3357,7 +3335,7 @@ class PlayState extends MusicBeatState
 				RecalculateRating();
 			}
 
-			if(ClientPrefs.scoreZoom)
+			/*if(ClientPrefs.scoreZoom)
 			{
 				if(scoreTxtTween != null) {
 					scoreTxtTween.cancel();
@@ -3369,7 +3347,7 @@ class PlayState extends MusicBeatState
 						scoreTxtTween = null;
 					}
 				});
-			}
+			}*/
 		}
 
 		var pixelShitPart1:String = "";
@@ -3493,7 +3471,7 @@ class PlayState extends MusicBeatState
 		});
 	}
 	
-	private function opponentPopUp():Void {
+	private function opponentPopUp(rating:Bool):Void {
 	  var pixelShitPart1:String = "";
 		var pixelShitPart2:String = '';
 
@@ -3503,8 +3481,11 @@ class PlayState extends MusicBeatState
 			pixelShitPart2 = '-pixel';
 		}
 		var p2Rate:FlxSprite = new FlxSprite();
-
-		p2Rate.loadGraphic(Paths.image(pixelShitPart1 + 'sick' + pixelShitPart2));
+    if (rating) {
+		  p2Rate.loadGraphic(Paths.image(pixelShitPart1 + 'sick' + pixelShitPart2));
+		} else {
+		  p2Rate.loadGraphic(Paths.image(pixelShitPart1 + 'good' + pixelShitPart2));
+		}
 		p2Rate.cameras = [camHUD];
 		p2Rate.x = 150;
 		p2Rate.screenCenter(Y);
@@ -3526,6 +3507,15 @@ class PlayState extends MusicBeatState
 			},
 			startDelay: Conductor.crochet * 0.001
 		});
+		
+		judgementTxt.text = 'Sicks: ' + sicks
+		+ '\nGoods: ' + goods
+		+ '\nBads: ' + bads
+		+ '\nShits: ' + shits
+		+ '\nCombo: ' + combo
+		+ '\n'
+		+ '\nOpponent Score: '  + p2_SongScore
+		+ '\nPlayer Score: '  + songScore;
 	}
 
 	private function onKeyPress(event:KeyboardEvent):Void
@@ -3810,6 +3800,8 @@ class PlayState extends MusicBeatState
 
 	function opponentNoteHit(note:Note):Void
 	{
+	  var score:Int = 350;
+	  var globalRandom:Bool = true;
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
 			camZooming = true;
 
@@ -3852,15 +3844,27 @@ class PlayState extends MusicBeatState
 		note.hitByOpponent = true;
 
 		callOnLuas('opponentNoteHit', [notes.members.indexOf(note), Math.abs(note.noteData), note.noteType, note.isSustainNote, note.ID]);
+		
+		if (FlxG.random.bool(75)) { 
+		  globalRandom = true;
+		  
+		  score = 350;
+		} else { 
+		  globalRandom = false;
+		  
+		  score = 200;
+		}
 
 		if (!note.isSustainNote)
 		{
 			if(modchartObjects.exists('note${note.ID}'))modchartObjects.remove('note${note.ID}');
-			opponentPopUp();
+			opponentPopUp(globalRandom);
 			note.kill();
 			notes.remove(note, true);
 			note.destroy();
 		}
+		
+	p2_SongScore += score
 	}
 
 	function goodNoteHit(note:Note):Void
@@ -3977,6 +3981,15 @@ class PlayState extends MusicBeatState
 				notes.remove(note, true);
 				note.destroy();
 			}
+			
+  		judgementTxt.text = 'Sicks: ' + sicks
+  		+ '\nGoods: ' + goods
+  		+ '\nBads: ' + bads
+  		+ '\nShits: ' + shits
+  		+ '\nCombo: ' + combo
+  		+ '\n'
+  		+ '\nOpponent Score: '  + p2_SongScore
+  		+ '\nPlayer Score: '  + songScore;
 		}
 	}
 
