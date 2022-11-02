@@ -3864,7 +3864,7 @@ class PlayState extends MusicBeatState
 			note.destroy();
 		}
 		
-	p2_SongScore += score
+  	p2_SongScore += score;
 	}
 
 	function goodNoteHit(note:Note):Void
