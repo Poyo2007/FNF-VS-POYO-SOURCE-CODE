@@ -474,17 +474,17 @@ class PlayState extends MusicBeatState
 		dadGroup = new FlxSpriteGroup(DAD_X, DAD_Y);
 		gfGroup = new FlxSpriteGroup(GF_X, GF_Y);
 
-		if (!ClientPrefs.lowQuality) {
-			switch (curStage)
-			{
-				case 'cityvspoyo': //Week 1
-					poyobg = new BGSprite('bg', -700, -345, 1, 1);
-					add(poyobg);
-				case 'cityvspoyoold': //Week 1
-					OLDpoyobg = new BGSprite('OG_bg', -700, -345, 1, 1);
-					add(OLDpoyobg);
-			}
-		}
+		
+  	switch (curStage)
+  	{
+  		case 'cityvspoyo': //Week 1
+  			poyobg = new BGSprite('bg', -700, -345, 1, 1);
+  			add(poyobg);
+  		case 'cityvspoyoold': //Week 1 but old
+  			OLDpoyobg = new BGSprite('OG_bg', -700, -345, 1, 1);
+  			add(OLDpoyobg);
+  	}
+		
 
 		switch(Paths.formatToSongPath(SONG.song))
 		{
@@ -593,25 +593,21 @@ class PlayState extends MusicBeatState
 			startCharacterLua(gf.curCharacter);
 		}
 
-		if (!ClientPrefs.lowQuality) {
-			dad = new Character(0, 0, false, SONG.player2);
-			startCharacterPos(dad, true);
-			dadGroup.add(dad);
-			startCharacterLua(dad.curCharacter);
-		}
+		dad = new Character(0, 0, false, SONG.player2);
+		startCharacterPos(dad, true);
+		dadGroup.add(dad);
+		startCharacterLua(dad.curCharacter);
     
-    if (!ClientPrefs.lowQuality) {
-	    if (isStoryMode)
-			  boyfriend = new Boyfriend(0, 0, true, SONG.player1);
-			else if (!isStoryMode && ClientPrefs.charSelect)
-			  boyfriend = new Boyfriend(0, 0, true, freeplayCharacter);
-			else
-			  boyfriend = new Boyfriend(0, 0, true, SONG.player1);
+    if (isStoryMode)
+		  boyfriend = new Boyfriend(0, 0, true, SONG.player1);
+		else if (!isStoryMode && ClientPrefs.charSelect)
+		  boyfriend = new Boyfriend(0, 0, true, freeplayCharacter);
+		else
+		  boyfriend = new Boyfriend(0, 0, true, SONG.player1);
 
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
 		startCharacterLua(boyfriend.curCharacter);
-    }
 
 		var camPos:FlxPoint = new FlxPoint(girlfriendCameraOffset[0], girlfriendCameraOffset[1]);
 		if(gf != null)
@@ -3392,8 +3388,6 @@ class PlayState extends MusicBeatState
 		rating.acceleration.y = 550;
 		rating.velocity.y -= FlxG.random.int(140, 175);
 		rating.velocity.x -= FlxG.random.int(0, 10);
-		rating.x += ClientPrefs.comboOffset[0];
-		rating.y -= ClientPrefs.comboOffset[1];
 
 		var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'combo' + pixelShitPart2));
 		comboSpr.cameras = [camHUD];
@@ -3519,9 +3513,22 @@ class PlayState extends MusicBeatState
 		p2Rate.velocity.x -= FlxG.random.int(0, 10);
 		p2Rate.x += ClientPrefs.comboOffset[0];
 		p2Rate.y -= ClientPrefs.comboOffset[1];
+		p2Rate.setGraphicSize(Std.int(p2Rate.width * 0.7));
+		p2Rate.antialiasing = ClientPrefs.globalAntialiasing;
 		
 		add(p2Rate);
 		p2Rate.updateHitbox();
+		
+		FlxTween.tween(p2Rate, {alpha: 0}, 0.2, {
+			startDelay: Conductor.crochet * 0.001
+		});
+		FlxTween.tween(comboSpr, {alpha: 0}, 0.2, {
+			onComplete: function(tween:FlxTween)
+			{
+				rating.destroy();
+			},
+			startDelay: Conductor.crochet * 0.001
+		});
 	}
 
 	private function onKeyPress(event:KeyboardEvent):Void
