@@ -3515,17 +3515,14 @@ class PlayState extends MusicBeatState
 		p2Rate.y -= ClientPrefs.comboOffset[1];
 		p2Rate.setGraphicSize(Std.int(p2Rate.width * 0.7));
 		p2Rate.antialiasing = ClientPrefs.globalAntialiasing;
-		
+
 		add(p2Rate);
 		p2Rate.updateHitbox();
-		
+
 		FlxTween.tween(p2Rate, {alpha: 0}, 0.2, {
-			startDelay: Conductor.crochet * 0.001
-		});
-		FlxTween.tween(comboSpr, {alpha: 0}, 0.2, {
 			onComplete: function(tween:FlxTween)
 			{
-				rating.destroy();
+				p2Rate.destroy();
 			},
 			startDelay: Conductor.crochet * 0.001
 		});
