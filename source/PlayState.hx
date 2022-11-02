@@ -824,7 +824,7 @@ class PlayState extends MusicBeatState
 		}
 
 		judgementTxt = new FlxText(0, 0, FlxG.width, "", 20);
-		judgementTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		judgementTxt.font = Paths.font('vcr.ttf');
 		judgementTxt.scrollFactor.set();
 		judgementTxt.borderSize = 1.25;
 		judgementTxt.screenCenter(Y);
@@ -3862,9 +3862,9 @@ class PlayState extends MusicBeatState
 			note.kill();
 			notes.remove(note, true);
 			note.destroy();
+			
+			p2_SongScore += score;
 		}
-		
-  	p2_SongScore += score;
 	}
 
 	function goodNoteHit(note:Note):Void
