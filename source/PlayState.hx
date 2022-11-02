@@ -3387,9 +3387,8 @@ class PlayState extends MusicBeatState
 
 		rating.loadGraphic(Paths.image(pixelShitPart1 + daRating.image + pixelShitPart2));
 		rating.cameras = [camHUD];
-		rating.screenCenter();
-		rating.x = coolText.x - 40;
-		rating.y -= 60;
+		rating.x = FlxG.width - 350;
+		rating.y = 60;
 		rating.acceleration.y = 550;
 		rating.velocity.y -= FlxG.random.int(140, 175);
 		rating.velocity.x -= FlxG.random.int(0, 10);
@@ -3853,6 +3852,7 @@ class PlayState extends MusicBeatState
 		if (!note.isSustainNote)
 		{
 			if(modchartObjects.exists('note${note.ID}'))modchartObjects.remove('note${note.ID}');
+			opponentPopUp();
 			note.kill();
 			notes.remove(note, true);
 			note.destroy();
