@@ -1715,7 +1715,7 @@ class PlayState extends MusicBeatState
 		checkEventNote();
 		generatedMusic = true;
 		}
-	}
+	
 
 	function eventPushed(event:EventNote) {
 		switch(event.event) {
