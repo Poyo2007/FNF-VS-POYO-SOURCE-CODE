@@ -272,7 +272,7 @@ class PlayState extends MusicBeatState
 	var songLength:Float = 0;
 
 	public var boyfriendCameraOffset:Array<Float> = null;
-	public var opponentCameraOffset:Array<Float> = null;
+  	public var opponentCameraOffset:Array<Float> = null;
 	public var girlfriendCameraOffset:Array<Float> = null;
 
 	#if desktop
@@ -828,6 +828,7 @@ class PlayState extends MusicBeatState
 		judgementTxt.scrollFactor.set();
 		judgementTxt.borderSize = 1.25;
 		judgementTxt.screenCenter(Y);
+		updateText();
 		add(judgementTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
@@ -1713,6 +1714,7 @@ class PlayState extends MusicBeatState
 		}
 		checkEventNote();
 		generatedMusic = true;
+		}
 	}
 
 	function eventPushed(event:EventNote) {
@@ -3170,7 +3172,7 @@ class PlayState extends MusicBeatState
 				return;
 			}
 
-			if (isStoryMode)
+			if (isStoryMode && songScore > p2_SongScore)
 			{
 				campaignScore += songScore;
 				campaignMisses += songMisses;
@@ -3241,7 +3243,7 @@ class PlayState extends MusicBeatState
 					}
 				}
 			}
-			else
+			else if (!isStoryMode && songScore > p2_SongScore)
 			{
 				trace('WENT BACK TO FREEPLAY??');
 				cancelMusicFadeTween();
@@ -3251,6 +3253,15 @@ class PlayState extends MusicBeatState
 				MusicBeatState.switchState(new FreeplayState());
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				changedDifficulty = false;
+			}
+			else if (songScore < p2_SongScore)
+			{
+			  if (isStoryMode) {
+  			  campaignScore += songScore;
+  				campaignMisses += songMisses;
+			  }
+			  
+			  FlxG.resetState();
 			}
 			transitioning = true;
 		}
@@ -3507,15 +3518,6 @@ class PlayState extends MusicBeatState
 			},
 			startDelay: Conductor.crochet * 0.001
 		});
-		
-		judgementTxt.text = 'Sicks: ' + sicks
-		+ '\nGoods: ' + goods
-		+ '\nBads: ' + bads
-		+ '\nShits: ' + shits
-		+ '\nCombo: ' + combo
-		+ '\n'
-		+ '\nOpponent Score: '  + p2_SongScore
-		+ '\nPlayer Score: '  + songScore;
 	}
 
 	private function onKeyPress(event:KeyboardEvent):Void
@@ -3750,6 +3752,8 @@ class PlayState extends MusicBeatState
 		}
 
 		callOnLuas('noteMiss', [notes.members.indexOf(daNote), daNote.noteData, daNote.noteType, daNote.isSustainNote, daNote.ID]);
+		
+		updateText();
 	}
 
 	function noteMissPress(direction:Int = 1):Void //You pressed a key when there was no notes to press for this key
@@ -3796,11 +3800,12 @@ class PlayState extends MusicBeatState
 			vocals.volume = 0;
 		}
 		callOnLuas('noteMissPress', [direction]);
+		updateText();
 	}
 
 	function opponentNoteHit(note:Note):Void
 	{
-	  var score:Int = 350;
+	  var score:Int = 350 / 2;
 	  var globalRandom:Bool = true;
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
 			camZooming = true;
@@ -3848,11 +3853,11 @@ class PlayState extends MusicBeatState
 		if (FlxG.random.bool(75)) { 
 		  globalRandom = true;
 		  
-		  score = 350;
+		  score = 350 / 2;
 		} else { 
 		  globalRandom = false;
 		  
-		  score = 200;
+		  score = 200 / 2;
 		}
 
 		if (!note.isSustainNote)
@@ -3864,6 +3869,7 @@ class PlayState extends MusicBeatState
 			note.destroy();
 			
 			p2_SongScore += score;
+			updateText();
 		}
 	}
 
@@ -3982,14 +3988,7 @@ class PlayState extends MusicBeatState
 				note.destroy();
 			}
 			
-  		judgementTxt.text = 'Sicks: ' + sicks
-  		+ '\nGoods: ' + goods
-  		+ '\nBads: ' + bads
-  		+ '\nShits: ' + shits
-  		+ '\nCombo: ' + combo
-  		+ '\n'
-  		+ '\nOpponent Score: '  + p2_SongScore
-  		+ '\nPlayer Score: '  + songScore;
+  		updateText();
 		}
 	}
 
@@ -4180,6 +4179,18 @@ class PlayState extends MusicBeatState
 			limoCorpseTwo.x = -500;
 			limoCorpseTwo.visible = false;
 		}
+	}
+	
+	function updateText():Void {
+	  judgementTxt.text = 'Sicks: ' + sicks
+		+ '\nGoods: ' + goods
+		+ '\nBads: ' + bads
+		+ '\nShits: ' + shits
+		+ '\nCombo: ' + combo
+		+ '\nMisses: ' + misses
+		+ '\n'
+		+ '\nOpponent Score: '  + p2_SongScore
+		+ '\nPlayer Score: '  + songScore;
 	}
 
 	private var preventLuaRemove:Bool = false;
