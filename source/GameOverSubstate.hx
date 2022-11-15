@@ -53,7 +53,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		Conductor.songPosition = 0;
 
-		boyfriend = new Boyfriend(x, y, true, characterName);
+		boyfriend = new Boyfriend(x, y, characterName);
 		boyfriend.x += boyfriend.positionArray[0];
 		boyfriend.y += boyfriend.positionArray[1];
 		add(boyfriend);
@@ -118,6 +118,7 @@ class GameOverSubstate extends MusicBeatSubstate
 				FlxG.camera.follow(camFollowPos, LOCKON, 1);
 				updateCamera = true;
 				isFollowingAlready = true;
+			}
 
 			if (boyfriend.animation.curAnim.finished && !playingDeathSound)
 			{
