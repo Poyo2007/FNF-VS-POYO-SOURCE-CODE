@@ -3805,7 +3805,7 @@ class PlayState extends MusicBeatState
 
 	function opponentNoteHit(note:Note):Void
 	{
-	  var score:Int = 350 / 2;
+	  var score:Int = 175;
 	  var globalRandom:Bool = true;
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
 			camZooming = true;
@@ -3853,11 +3853,11 @@ class PlayState extends MusicBeatState
 		if (FlxG.random.bool(75)) { 
 		  globalRandom = true;
 		  
-		  score = 350 / 2;
+		  score = 175;
 		} else { 
 		  globalRandom = false;
 		  
-		  score = 200 / 2;
+		  score = 100;
 		}
 
 		if (!note.isSustainNote)
