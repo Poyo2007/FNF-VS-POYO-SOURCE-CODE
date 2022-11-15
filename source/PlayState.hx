@@ -4182,15 +4182,17 @@ class PlayState extends MusicBeatState
 	}
 	
 	function updateText():Void {
-	  judgementTxt.text = 'Sicks: ' + sicks
-		+ '\nGoods: ' + goods
-		+ '\nBads: ' + bads
-		+ '\nShits: ' + shits
-		+ '\nCombo: ' + combo
-		+ '\nMisses: ' + misses
-		+ '\n'
-		+ '\nOpponent Score: '  + p2_SongScore
-		+ '\nPlayer Score: '  + songScore;
+	  if (!ClientPrefs.lowQuality) {
+  	  judgementTxt.text = 'Sicks: ' + sicks
+  		+ '\nGoods: ' + goods
+  		+ '\nBads: ' + bads
+  		+ '\nShits: ' + shits
+  		+ '\nCombo: ' + combo
+  		+ '\nMisses: ' + songMisses
+  		+ '\n'
+  		+ '\nOpponent Score: '  + p2_SongScore
+  		+ '\nPlayer Score: '  + songScore;
+	  }
 	}
 
 	private var preventLuaRemove:Bool = false;
@@ -4510,3 +4512,4 @@ class PlayState extends MusicBeatState
 	var curLight:Int = -1;
 	var curLightEvent:Int = -1;
 }
+.
