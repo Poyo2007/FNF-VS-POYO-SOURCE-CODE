@@ -138,7 +138,11 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "FNF: VS POYO W1C DX (v1.5)", 12);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "FNF: VS POYO: GLOWUP - PART 1", 12);
+		versionShit.scrollFactor.set();
+		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		add(versionShit);
+	  var versionShit:FlxText = new FlxText(12, 0, 0, "PSST, tap the menu icons", 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
@@ -160,9 +164,9 @@ class MainMenuState extends MusicBeatState
 		}
 		#end
 
-		/*#if android
+		#if android
 		addVirtualPad(UP_DOWN, A_B_E);
-		#end*/
+		#end
 
 		super.create();
 	}

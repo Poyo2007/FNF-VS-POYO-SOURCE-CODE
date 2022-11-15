@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="poyo_gf.png">
+<SubTexture name="giggle instance 0000" x="2209" y="0" width="369" height="547" frameX="-7" frameY="-7" frameWidth="378" frameHeight="562" />
+<SubTexture name="giggle instance 0001" x="1843" y="0" width="366" height="551" frameX="-11" frameY="-7" frameWidth="378" frameHeight="562" />
+<SubTexture name="giggle instance 0002" x="733" y="1128" width="362" height="556" frameX="-15" frameY="-7" frameWidth="378" frameHeight="562" />
+<SubTexture name="giggle instance 0003" x="1482" y="559" width="361" height="557" frameX="-16" frameY="-5" frameWidth="378" frameHeight="562" />
+<SubTexture name="giggle instance 0004" x="1482" y="0" width="361" height="559" frameX="-16" frameY="-4" frameWidth="378" frameHeight="562" />
+<SubTexture name="giggle instance 0005" x="1120" y="0" width="361" height="561" frameX="-17" frameY="-2" frameWidth="378" frameHeight="562" />
+<SubTexture name="giggle instance 0006" x="0" y="566" width="361" height="561" frameX="-17" frameY="-2" frameWidth="378" frameHeight="562" />
+<SubTexture name="giggle instance 0007" x="361" y="566" width="361" height="561" frameX="-17" frameY="-2" frameWidth="378" frameHeight="562" />
+<SubTexture name="left instance 0000" x="757" y="1686" width="385" height="544" frameX="-9" frameY="-18" frameWidth="403" frameHeight="560" />
+<SubTexture name="left instance 0001" x="1142" y="1686" width="385" height="544" frameX="-9" frameY="-18" frameWidth="403" frameHeight="560" />
+<SubTexture name="left instance 0002" x="371" y="1686" width="385" height="544" frameX="-9" frameY="-18" frameWidth="403" frameHeight="560" />
+<SubTexture name="left instance 0003" x="0" y="1686" width="371" height="547" frameX="-24" frameY="-12" frameWidth="403" frameHeight="560" />
+<SubTexture name="left instance 0004" x="1843" y="551" width="364" height="550" frameX="-32" frameY="-8" frameWidth="403" frameHeight="560" />
+<SubTexture name="left instance 0005" x="1458" y="1128" width="362" height="551" frameX="-37" frameY="-5" frameWidth="403" frameHeight="560" />
+<SubTexture name="left instance 0006" x="1095" y="1128" width="362" height="552" frameX="-39" frameY="-5" frameWidth="403" frameHeight="560" />
+<SubTexture name="right instance 0000" x="0" y="0" width="373" height="566" frameX="-26" frameY="-9" frameWidth="417" frameHeight="576" />
+<SubTexture name="right instance 0001" x="373" y="0" width="373" height="566" frameX="-26" frameY="-9" frameWidth="417" frameHeight="576" />
+<SubTexture name="right instance 0002" x="746" y="0" width="374" height="564" frameX="-26" frameY="-11" frameWidth="417" frameHeight="576" />
+<SubTexture name="right instance 0003" x="722" y="566" width="371" height="561" frameX="-22" frameY="-11" frameWidth="417" frameHeight="576" />
+<SubTexture name="right instance 0004" x="1093" y="566" width="368" height="559" frameX="-20" frameY="-12" frameWidth="417" frameHeight="576" />
+<SubTexture name="right instance 0005" x="0" y="1128" width="367" height="558" frameX="-19" frameY="-12" frameWidth="417" frameHeight="576" />
+<SubTexture name="right instance 0006" x="367" y="1128" width="366" height="558" frameX="-19" frameY="-12" frameWidth="417" frameHeight="576" />
+</TextureAtlas>

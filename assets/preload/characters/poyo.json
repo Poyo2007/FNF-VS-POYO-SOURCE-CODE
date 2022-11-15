@@ -80,7 +80,7 @@
   "image": "characters/poyospr",
   "position": [
     -210,
-    30
+    0
   ],
   "healthicon": "poyo",
   "flip_x": false,
@@ -93,6 +93,6 @@
     0,
     -120
   ],
-  "sing_duration": 6.1,
+  "sing_duration": 4,
   "scale": 1
 }

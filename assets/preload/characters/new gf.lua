@@ -1,5 +1,5 @@
 function onCreate()
-  makeAnimatedLuaSprite('speaker', 'Speaker', getProperty('gf.x') + -100, getProperty('gf.y') + 170)
+  makeAnimatedLuaSprite('speaker', 'Speaker', getProperty('gf.x') - 130, getProperty('gf.y') + 70)
 	addAnimationByPrefix('speaker', 'bop', 'SpeakerLol', 24, true)
 	addLuaSprite('speaker', false)
 end
