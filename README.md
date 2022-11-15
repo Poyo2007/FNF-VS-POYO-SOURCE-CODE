@@ -1,8 +1,10 @@
-Until GitHub actions for android is fixed you don't have action builds for android, you can only build the game on pc
+# FNF: VS POYO Source Code
+welcome to the github page of pyoy FNF
 
-# Friday Night Funkin' - Psych Engine With Android Support
-Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), intended to be a fix for the vanilla version's many issues while keeping the casual play aspect of it. Also aiming to be an easier alternative to newbie coders.
+modify the source code to your liking, have fun
+any modifications you make must have a link to the original mod
 
+the rest of this aint by me lmao
 ## Installation:
 You must have [the most up-to-date version of Haxe](https://haxe.org/download/), seriously, stop using 4.1.5, it misses some stuff.
 
