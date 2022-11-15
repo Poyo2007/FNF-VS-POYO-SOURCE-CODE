@@ -2543,7 +2543,7 @@ class PlayState extends MusicBeatState
 					timer.active = true;
 				}
 				if (boyfriend != null)
-					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x - boyfriend.positionArray[0], boyfriend.getScreenPosition().y - boyfriend.positionArray[1], camFollowPos.x, camFollowPos.y));
+					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x - boyfriend.positionArray[0], boyfriend.getScreenPosition().y - boyfriend.positionArray[1], true, camFollowPos.x, camFollowPos.y));
 				else {
 					if(isStoryMode) {
 						MusicBeatState.switchState(new MainMenuState());
