@@ -118,7 +118,6 @@ class GameOverSubstate extends MusicBeatSubstate
 				FlxG.camera.follow(camFollowPos, LOCKON, 1);
 				updateCamera = true;
 				isFollowingAlready = true;
-t
 
 			if (boyfriend.animation.curAnim.finished && !playingDeathSound)
 			{
