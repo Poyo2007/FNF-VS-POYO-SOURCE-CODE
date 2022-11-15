@@ -3805,7 +3805,7 @@ class PlayState extends MusicBeatState
 
 	function opponentNoteHit(note:Note):Void
 	{
-	  var score:Int = 175;
+	  var score:Int = 250;
 	  var globalRandom:Bool = true;
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
 			camZooming = true;
