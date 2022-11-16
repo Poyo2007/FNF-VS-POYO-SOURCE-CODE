@@ -3363,6 +3363,7 @@ class PlayState extends MusicBeatState
 
 		var pixelShitPart1:String = "";
 		var pixelShitPart2:String = '';
+		var thefuckin:Float = 0;
 
 		if (PlayState.isPixelStage)
 		{
@@ -3373,7 +3374,7 @@ class PlayState extends MusicBeatState
 		rating.loadGraphic(Paths.image(pixelShitPart1 + daRating.image + pixelShitPart2));
 		rating.cameras = [camHUD];
 		rating.x = FlxG.width - rating.width - 150;
-		rating.y = 60;
+		rating.screenCenter(Y)
 		rating.acceleration.y = 550;
 		rating.velocity.y -= FlxG.random.int(140, 175);
 		rating.velocity.x -= FlxG.random.int(0, 10);
@@ -3407,6 +3408,7 @@ class PlayState extends MusicBeatState
 
 		comboSpr.updateHitbox();
 		rating.updateHitbox();
+		thefuckin = rating.y;
 
 		var seperatedScore:Array<Int> = [];
 
@@ -3424,7 +3426,8 @@ class PlayState extends MusicBeatState
 			numScore.cameras = [camHUD];
 			numScore.screenCenter();
 			numScore.x = rating.getGraphicMidpoint().x + (43 * daLoop) - 90;
-			numScore.y += rating.getGraphicMidpoint().y + 100;
+			numScore.screenCenter(Y);
+			numScore.y += 50;
 
 			if (!PlayState.isPixelStage)
 			{

@@ -142,10 +142,12 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+		#if mobile
 	  var versionShit:FlxText = new FlxText(12, 0, 0, "PSST, tap the menu icons", 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+		#end
 
 		// NG.core.calls.event.logEvent('swag').send();
 
@@ -162,10 +164,6 @@ class MainMenuState extends MusicBeatState
 				ClientPrefs.saveSettings();
 			}
 		}
-		#end
-
-		#if android
-		addVirtualPad(UP_DOWN, A_B_E);
 		#end
 
 		super.create();
