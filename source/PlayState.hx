@@ -870,7 +870,7 @@ class PlayState extends MusicBeatState
 
 		// SONG SPECIFIC SCRIPTS
 		#if LUA_ALLOWED
-		if (!Paths.formatToSongPath(SONG.song) == "epic" || Paths.formatToSongPath(SONG.song) == "epic" && FlxG.random.bool(25) == true) {
+		if (Paths.formatToSongPath(SONG.song) != "epic" || Paths.formatToSongPath(SONG.song) == "epic" && FlxG.random.bool(25) == true) {
 		var filesPushed:Array<String> = [];
 		var foldersToCheck:Array<String> = [SUtil.getPath() + Paths.getPreloadPath('data/' + Paths.formatToSongPath(SONG.song) + '/')];
 
