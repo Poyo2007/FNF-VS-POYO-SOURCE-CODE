@@ -85,7 +85,7 @@ class CreditsState extends MusicBeatState
 			['Poyo', 'poyo', 'Director, Main Programmer, Vocal Maker', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['Shekkai47', 'shekkai', 'Composed Epic, Summer Sunset', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['bingg', 'bingg', 'Animated Poyo and Girlfriend', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
-			['VR_Core.', 'core', 'Made Poopshit Chart', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
+			['VR_Core', 'core', 'Made Poopshit Chart', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['Nafri', 'nafri', 'Composed Epic Legacy', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['almondsdemo', 'almond', 'Made Name Thief and Energizer', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['MaidntlessRT', 'maidentless', 'Made Both BF and GF Sprites', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
