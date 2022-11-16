@@ -92,7 +92,7 @@ class CreditsState extends MusicBeatState
 			['PBGFAN', 'pbgfan', 'this is the guy responsible for poopshit? GRRR I HATE U GRR GRRR BARK', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['radi/vanilla', 'vani', 'Made Both OG and New Poyo Sprites', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['McFadeDev', 'mcfade', 'Made OG Background (as shown in Epic Legacy)',	'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
-			['Aly-Ant', 'aly', 'Coding', "https://youtube.com/channel/UCTnxFz7Go1PZ7mmWx4kQlbQ", "444444"],
+			['Aly-Ant', 'aly', 'Coding\nDONT JOKE ABOUT MY NAME PLSSSS\nthank you', "https://youtube.com/channel/UCTnxFz7Go1PZ7mmWx4kQlbQ", "444444"],
 			['delta', 'delta', 'Mod Trailer, making the CREDITS FILE (poyo you are LAZY) ((just kidding))', 'https://twitter.com/deltadxp', '444444'],
 			['Missingtex', 'missingtex', 'Animated BF', '', '444444'],
 			['beepetheife', 'beepe', 'Epic Chart', '', '444444'],
