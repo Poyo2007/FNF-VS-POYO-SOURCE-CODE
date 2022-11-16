@@ -3373,8 +3373,8 @@ class PlayState extends MusicBeatState
 
 		rating.loadGraphic(Paths.image(pixelShitPart1 + daRating.image + pixelShitPart2));
 		rating.cameras = [camHUD];
-		rating.x = FlxG.width - rating.width - 150;
-		rating.screenCenter(Y)
+		rating.x = FlxG.width - rating.width;
+		rating.screenCenter(Y);
 		rating.acceleration.y = 550;
 		rating.velocity.y -= FlxG.random.int(140, 175);
 		rating.velocity.x -= FlxG.random.int(0, 10);
