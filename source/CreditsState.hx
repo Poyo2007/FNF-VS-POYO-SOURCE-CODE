@@ -81,7 +81,7 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
-            ['FNF: VS POYO Dev Team'],
+            ['FNF VS POYO Dev Team'],
 			['Poyo', 'poyo', 'Director, Main Programmer, Vocal Maker', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['Shekkai47', 'shekkai', 'Composed Epic, Summer Sunset', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['bingg', 'bingg', 'Animated Poyo and Girlfriend', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
