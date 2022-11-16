@@ -5,9 +5,8 @@ local notesjumping = false
 local centerarrows = true
 local crazynotes = false
 local coolercamerarotation = false
-local backnforth = false
 local offsetos = 10
-local timing = 1
+local timing = 0
 local songPos
 local NotePos = {}
 function onSongStart()
@@ -213,25 +212,17 @@ function onBeatHit()
 	end
 	timing = timing + 1 -- logically dumb but hey it works
 	if timing == 4 then
-		timing = 1
+		timing = 0
 		offsetos = offsetos *-1
-	end -- that code did not make it on sync
-	-- mine is technically a entire redo???
-	if camerarotating == true then
-	  if backnforth == false then
-  	  setProperty("camHUD.angle", 15)
-  	  backnforth = true
-  	else
-  	  setProperty("camHUD.angle", -15)
-  	  backnforth = false
-  	end
-		doTweenAngle("poosay", "camHUD", 0, crochet / 1000 * 2, 'backOut') -- * math.sin(songPos)
 	end
 end
 
 function onUpdate(elapsed)
 	local songPos = getPropertyFromClass('Conductor', 'songPosition') /1000
 
+	if camerarotating == true then
+		doTweenAngle("poosay", "camHUD", offsetos, 0.5, 'backOut') -- * math.sin(songPos)
+	end
 	if cameracenter == true then
 		doTweenAngle("poosay", "camHUD", 0, 0.5, 'backOut')
 	end

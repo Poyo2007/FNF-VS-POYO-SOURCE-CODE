@@ -91,6 +91,8 @@ class CreditsState extends MusicBeatState
 			['MaidntlessRT', 'maidentless', 'Made Both BF and GF Sprites', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['PBGFAN', 'pbgfan', 'this is the guy responsible for poopshit? GRRR I HATE U GRR GRRR BARK', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['radi/vanilla', 'vani', 'Made Both OG and New Poyo Sprites', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
+			['Crujikekas', '', 'Made BG', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
+			['Ron the Music Boi', '', 'Made Mobile Buttons', 'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['McFadeDev', 'mcfade', 'Made OG Background (as shown in Epic Legacy)',	'https://www.youtube.com/channel/UC2Sk7vtPzOvbVzdVTWrribQ', '444444'],
 			['Aly-Ant', 'aly', 'Coding\nDONT JOKE ABOUT MY NAME PLSSSS\nthank you', "https://youtube.com/channel/UCTnxFz7Go1PZ7mmWx4kQlbQ", "444444"],
 			['delta', 'delta', 'Mod Trailer, making the CREDITS FILE (poyo you are LAZY) ((just kidding))\nim sorry i had to rely on you', 'https://twitter.com/deltadxp', '444444'],
@@ -238,9 +240,6 @@ class CreditsState extends MusicBeatState
 				}
 			}
 
-			if(controls.ACCEPT && (creditsStuff[curSelected][3] == null || creditsStuff[curSelected][3].length > 4)) {
-				CoolUtil.browserLoad(creditsStuff[curSelected][3]);
-			}
 			if (controls.BACK)
 			{
 				if(colorTween != null) {
