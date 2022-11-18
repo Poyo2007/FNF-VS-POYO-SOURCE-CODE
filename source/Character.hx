@@ -423,7 +423,7 @@ class Character extends FlxSprite
 	}
 
   function returnPlayerXOffset(num:Int = 0) {
-    var newNum:Float = 0
+    var newNum:Float = 0;
     if (num < 0)
       num + (num * 2);
     else if (num > 0)
