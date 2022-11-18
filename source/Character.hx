@@ -212,6 +212,7 @@ class Character extends FlxSprite
 							else
 							  addOffset(anim.anim, anim.offsets[0] , anim.offsets[1]);
             }
+					}
 				} else {
 					quickAnimAdd('idle', 'BF idle dance');
 				}
@@ -421,7 +422,7 @@ class Character extends FlxSprite
 		animation.addByPrefix(name, anim, 24, false);
 	}
 
-  function returnPlayerXOffset(num:Int) {
+  function returnPlayerXOffset(num:Int = 0) {
     var newNum:Float = 0
     if (num < 0)
       num + (num * 2);
