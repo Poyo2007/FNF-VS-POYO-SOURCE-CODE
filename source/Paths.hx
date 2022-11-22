@@ -221,7 +221,7 @@ class Paths
 	inline static public function voices(song:String, diff:String):Any
 	{
 		var songKey:String = '${formatToSongPath(song)}/Voices';
-		var voices = returnSound('songs', diff + songKey);
+		var voices = returnSound('songs', diff + '/' + songKey);
 		return voices;
 	}
 
