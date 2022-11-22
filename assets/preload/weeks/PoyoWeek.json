@@ -31,7 +31,7 @@
   "hiddenUntilUnlocked": false,
   "hideFreeplay": false,
   "weekBackground": "poyo",
-  "difficulties": "Normal",
+  "difficulties": "Normal, Generic",
   "weekCharacters": [
     "",
     "",
