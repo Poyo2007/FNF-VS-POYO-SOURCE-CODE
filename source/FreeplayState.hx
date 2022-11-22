@@ -142,7 +142,7 @@ class FreeplayState extends MusicBeatState
 
 		diffText = new FlxText(scoreText.x, scoreText.y + 36, 0, "", 24);
 		diffText.font = scoreText.font;
-		diffText.alpha = 0;
+		diffText
 		add(diffText);
 
 		add(scoreText);
@@ -199,7 +199,7 @@ class FreeplayState extends MusicBeatState
 		add(text);
 
 		#if android
-		addVirtualPad(UP_DOWN, A_B_C_X_Y_Z);
+		addVirtualPad(FULL, A_B_C_X_Y_Z);
 		#end
 
 		super.create();
