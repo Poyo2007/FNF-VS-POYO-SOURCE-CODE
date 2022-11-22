@@ -220,16 +220,30 @@ class Paths
 
 	inline static public function voices(song:String, diff:String):Any
 	{
-		var songKey:String = '${formatToSongPath(song)}/Voices';
-		var voices = returnSound('songs', diff + '/' + songKey);
-		return voices;
+		if (CoolUtil.difficulties[PlayState.storyDifficulty].toLowerCase() == "generic") {
+			var songKey:String = 'generic/${formatToSongPath(song)}/Voices';
+			var voices = returnSound('songs', songKey);
+			return voices;
+		}
+		else {
+			var songKey:String = 'normal/${formatToSongPath(song)}/Voices';
+			var voices = returnSound('songs', songKey);
+			return voices;
+		}
 	}
 
 	inline static public function inst(song:String, diff:String):Any
 	{
-		var songKey:String = '${formatToSongPath(song)}/Inst';
-		var inst = returnSound('songs', diff + songKey);
-		return inst;
+		if (CoolUtil.difficulties[PlayState.storyDifficulty].toLowerCase() == "generic") {
+			var songKey:String = 'generic/${formatToSongPath(song)}/Inst';
+			var inst = returnSound('songs', songKey);
+			return inst;
+		}
+		else {
+			var songKey:String = 'normal/${formatToSongPath(song)}/Inst';
+			var inst = returnSound('songs', songKey);
+			return inst;
+		}
 	}
 
 	inline static public function image(key:String, ?library:String):FlxGraphic
