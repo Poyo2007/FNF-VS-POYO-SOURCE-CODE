@@ -218,17 +218,17 @@ class Paths
 		return file;
 	}
 
-	inline static public function voices(song:String):Any
+	inline static public function voices(song:String, diff:String):Any
 	{
 		var songKey:String = '${formatToSongPath(song)}/Voices';
-		var voices = returnSound('songs', songKey);
+		var voices = returnSound('songs', diff + '/' + songKey);
 		return voices;
 	}
 
-	inline static public function inst(song:String):Any
+	inline static public function inst(song:String, diff:String):Any
 	{
 		var songKey:String = '${formatToSongPath(song)}/Inst';
-		var inst = returnSound('songs', songKey);
+		var inst = returnSound('songs', diff + songKey);
 		return inst;
 	}
 

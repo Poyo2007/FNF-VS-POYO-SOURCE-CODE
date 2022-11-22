@@ -205,16 +205,13 @@ class Character extends FlxSprite
 						} else {
 							animation.addByPrefix(animAnim, animName, animFps, animLoop);
 						}
-
-						if(anim.offsets != null && !player && anim.offsets.length > 1) {
-							addOffset(anim.anim, anim.offsets[0], anim.offsets[1]);
-						} else if(anim.offsets == null && anim.player_offsets != null && !player && anim.offsets.length > 1) {
-							addOffset(anim.anim, anim.player_offsets[0], anim.player_offsets[1]);
-						} else if(anim.player_offsets != null && player && anim.offsets.length > 1) {
-							addOffset(anim.anim, anim.player_offsets[0], anim.player_offsets[1]);
-						} else if (anim.player_offsets == null && anim.offsets != null && player && anim.offsets.length > 1) {
-							addOffset(anim.anim, anim.offsets[0], anim.offsets[1]);
-						}
+            if (curCharacter != 'bf' || curCharacter != 'new bf')
+						if(anim.offsets != null && anim.offsets.length > 1) {
+						  if (player)
+							  addOffset(anim.anim, returnPlayerXOffset(anim.offsets[0]), anim.offsets[1]);
+							else
+							  addOffset(anim.anim, anim.offsets[0] , anim.offsets[1]);
+            }
 					}
 				} else {
 					quickAnimAdd('idle', 'BF idle dance');
@@ -424,4 +421,13 @@ class Character extends FlxSprite
 	{
 		animation.addByPrefix(name, anim, 24, false);
 	}
+
+  function returnPlayerXOffset(num:Int = 0) {
+    var newNum:Float = 0;
+    
+    num - (num * 2);
+
+    newNum = num;
+    return(newNum);
+  }
 }

@@ -167,7 +167,7 @@ jobs:
         run: |
           haxelib --quiet install lime 7.9.0
           haxelib --quiet install openfl 9.1.0
-          haxelib --quiet install flixel
+          haxelib --quiet install flixel 4.11.0
           git clone https://github.com/Sirox228/hxcpp-new-ndk-support
           haxelib dev hxcpp hxcpp-new-ndk-support
           cd hxcpp-new-ndk-support/tools/hxcpp
@@ -190,6 +190,7 @@ jobs:
           haxelib run lime config ANDROID_SETUP true
           haxelib set lime 7.9.0
           haxelib set openfl 9.1.0
+          haxelib set flixel 4.11.0
           haxelib dev hxcpp hxcpp-new-ndk-support
           haxelib list
 
